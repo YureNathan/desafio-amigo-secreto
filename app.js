@@ -18,3 +18,14 @@ function atualizarListaAmigos() {
     lista.innerHTML += `<li>${amigos[i]}</li>`;
   }
 }
+
+function sortearAmigo() {
+  tamanhoListaAmigos = amigos.length;
+  let amigoSorteado = Math.floor(Math.random() * tamanhoListaAmigos);
+  if (tamanhoListaAmigos != 0) {
+    document.getElementById("listaAmigos").innerHTML = "";
+    document.getElementById(
+      "resultado"
+    ).innerHTML = `<li>O amigo secreto sorteado é: ${amigos[amigoSorteado]}</li>`;
+  }
+}
